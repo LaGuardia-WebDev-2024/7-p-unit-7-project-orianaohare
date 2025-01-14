@@ -1,20 +1,67 @@
+/* Define custom font using @font-face */
+@font-face {
+  font-family: 'StarFont'; /* Name of the font */
+  src: url('https://cdn.glitch.global/9305ce58-1668-4edf-b9f4-9325a45cead2/BamboyTrial-Regular.otf?v=1736710030995') format('truetype');
+}
+
+/* General styling for hot pink & black theme */
 body {
   background-color: black;
+  color: hotpink;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  color: white;
+  margin: 0;
+  padding: 0;
 }
 
+h1 {
+  font-size: 3rem;
+  margin: 20px;
+  font-family: 'StarFont', cursive; /* Apply the uploaded font */
+  text-shadow: 2px 2px 5px hotpink;
+}
 
+h2 {
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+ol {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.goal-image {
+  margin-top: 20px;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid hotpink;
+  box-shadow: 0px 0px 10px hotpink;
+}
+
+/* Canvas styles */
 #myCanvas {
-  background-image: url("https://images.pexels.com/photos/1387577/pexels-photo-1387577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  background-size: 400px;
-  border-radius: 30px;
-  border: 1px solid rgb(255,245,227);
+  background-color: black;
+  border: 2px solid hotpink;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0px 0px 20px hotpink;
 }
 
-.main{
+/* Flexbox styling for layout */
+.main {
   display: flex;
-  text-align: left;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
-
