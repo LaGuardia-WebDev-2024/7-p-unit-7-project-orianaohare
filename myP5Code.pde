@@ -1,33 +1,54 @@
-// Setup Procedure - Runs Once to Set the Canvas
+//🟢Setup Procedure - Runs Once to Set The Canvas
 void setup() {
-  size(400, 400);
+    size(400, 400); 
 }
 
-// Variables for animations
-var fireworkX = 20;
-var fireworkSize = 20;
-var fireworkColor;
+//🎯Variable Declarations Go Here
+var fireworkSize = 10;
+var sparkX = 200;
 
-// Draw Procedure - Runs on Repeat
-void draw() {
-  // Background with fade effect
-  background(0, 0, 0, 20);
+//🟢Draw Procedure - Runs on Repeat
+draw = function(){
+ 
+    noStroke();
+    
+    // the dark night sky
+    background(10, 10, 50);
+    
+    // The firework explosion,
+    fill(300, 0, 150); 
+// bright red explosion
+    ellipse(200, 200, fireworkSize, fireworkSize);
+    
+    // The ground below
+    fill(50, 168, 82); // grass
+    rect(0, 300, 400, 100);
+    
+    // A spark flying away
+    fill(255, 255, 0); // yellow spark
+    ellipse(sparkX, 250, 5, 5);
+    
+    fireworkSize = fireworkSize + 10; 
+    sparkX = sparkX + 2;
 
-  // Change firework color to random hot pink shades
-  fireworkColor = color(random(200, 255), random(100, 150), random(200, 255));
-  fill(fireworkColor);
-
-  // Draw firework (circle)
-  ellipse(fireworkX, 200, fireworkSize, fireworkSize);
-
-  // Animate firework position and size
-  fireworkX += 2;
-  fireworkSize = 20 + sin(frameCount * 0.1) * 10;
-
-  // Reset firework position if it moves off-screen
-  if (fireworkX > width) {
-    fireworkX = -fireworkSize;
+   if(mousePressed){
+    showXYPositions();
   }
+  
+
+
 }
 
+//🟡Extra FUN Features Ms. Hall Added
+//Proceed with Caution (and Curiosity!)
 
+showXYPositions = function(){
+    fill(255,255,255)
+    rect(270,300,150,100)
+    fill(0,0,0)
+    textSize(30)
+    text("x = " + mouseX + "\ny = " +mouseY, 290, 350)
+    fill(255,0,255)
+    ellipse(mouseX, mouseY, 10, 10);
+    fill(255,255,255)
+}
