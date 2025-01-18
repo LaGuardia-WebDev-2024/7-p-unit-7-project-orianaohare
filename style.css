@@ -1,67 +1,40 @@
-/* Define custom font using @font-face */
-@font-face {
-  font-family: 'StarFont'; /* Name of the font */
-  src: url('https://cdn.glitch.global/9305ce58-1668-4edf-b9f4-9325a45cead2/BamboyTrial-Regular.otf?v=1736710030995') format('truetype');
-}
-
-/* General styling for hot pink & black theme */
 body {
-  background-color: black;
-  color: hotpink;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #4B4E6D;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  color: pink;
+font-family: outline;
+   
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: hotpink;
+
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 20px;
-  font-family: 'StarFont', cursive; /* Apply the uploaded font */
-  text-shadow: 2px 2px 5px hotpink;
-}
 
-h2 {
-  text-decoration: underline;
-  font-size: 2rem;
-}
-
-p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-ol {
-  font-size: 1.3rem;
-  margin: 10px 0;
-  padding-left: 20px;
-}
-
-.goal-image {
-  margin-top: 20px;
-  width: 120px;
-  height: auto;
-  border-radius: 50%;
-  border: 2px solid hotpink;
-  box-shadow: 0px 0px 10px hotpink;
-}
-
-/* Canvas styles */
 #myCanvas {
-  background-color: black;
-  border: 2px solid hotpink;
-  border-radius: 20px;
-  margin: 20px auto;
-  display: block;
-  box-shadow: 0px 0px 20px hotpink;
+  background-image: url("https://images.stockcake.com/public/3/1/1/311bc61a-612a-4c2e-860c-fdcfb7a82848_large/city-night-reflection-stockcake.jpg"
+  );
+  background-size: 400px;
+  border-radius: 30px;
+  border: 3px solid rgb(155,355,255);
 }
 
-/* Flexbox styling for layout */
-.main {
+.main{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+  text-align: left;
+  justify-content: space-around;
 }
+
+
+@font-face
+{ font-family: outline;
+src: url(https://cdn.glitch.global/9305ce58-1668-4edf-b9f4-9325a45cead2/Waffle%20Cake.otf?v=1737146187306)
+}
+
+h1:hover {
+  opacity:1;
+    background-color: lavender;
+}
+
+h2:hover{opacity:2; background-color:#488286;}  
+h3:hover {opacity:1; background-color:#4B4E6D;}
+ol:hover {opacity:2; background-color:#305252;}
